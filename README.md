@@ -5,7 +5,7 @@ beskrivs som JSON eller YAML, och ramverket renderar det till PNG och PDF med HT
 rough.js för de skissade accenterna och headless Chrome. A4 liggande, 1600 × 1131 px.
 
 Det här repot är den enda källan till ramverket. Alla repon använder det härifrån.
-Agenter: läs [`AGENTS.md`](AGENTS.md).
+Agenter: läs [`AGENTS.md`](AGENTS.md) och [`OVERLAMNING.md`](OVERLAMNING.md).
 
 ## Rendera
 
