@@ -1,0 +1,32 @@
+{
+ "name": "skissramverk",
+ "version": "0.1.0",
+ "private": true,
+ "description": "Redaktionell skisstil för CP:s dokument: JSON/YAML till PNG och PDF",
+ "bin": {
+  "skiss": "render.js"
+ },
+ "scripts": {
+  "render": "node render.js",
+  "exempel": "node render.js examples/exempel-neutralt.json out"
+ },
+ "dependencies": {
+  "lucide-static": "*",
+  "playwright-core": "*",
+  "roughjs": "^4.6.6"
+ },
+ "optionalDependencies": {
+  "yaml": "^2.9.1"
+ },
+ "repository": "github:cllp/skissramverk",
+ "files": [
+  "render.js",
+  "lib/",
+  "tokens.css",
+  "skiss.css",
+  "examples/"
+ ],
+ "engines": {
+  "node": ">=18"
+ }
+}

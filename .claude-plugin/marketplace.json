@@ -1,0 +1,13 @@
+{
+  "name": "skissramverk",
+  "owner": {
+    "name": "Claes-Philip Staiger"
+  },
+  "plugins": [
+    {
+      "name": "skissramverk",
+      "source": "./",
+      "description": "CP:s redaktionella skisstil: spec i JSON eller YAML till PNG och PDF, med stilregler och QA."
+    }
+  ]
+}

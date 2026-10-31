@@ -1,0 +1,9 @@
+{
+  "name": "skissramverk",
+  "description": "CP:s redaktionella skisstil: spec i JSON eller YAML till PNG och PDF, med stilregler och QA.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Claes-Philip Staiger"
+  },
+  "repository": "https://github.com/cllp/skissramverk"
+}

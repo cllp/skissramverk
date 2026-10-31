@@ -1,0 +1,6 @@
+{"title":"Neutralt exempel","meta":"Exempel","footer":"Sida 1 av 1, exempel","pages":[{"eyebrow":"Exempel","title":"Ett ärende i tre steg","mark":"Ett ärende","lede":"Så ritas ett enkelt flöde med skissramverket.","blocks":[
+{"type":"cards","cols":3,"items":[
+{"icon":"inbox","label":"Steg 1","title":"Förfrågan","text":"Någon hör av sig.","tone":"salvia","status":{"text":"Fungerar","tone":"salvia"}},
+{"icon":"user","label":"Steg 2","title":"Ansvarig","text":"En person tar ärendet.","tone":"salvia","status":{"text":"Fungerar","tone":"salvia"}},
+{"icon":"bell","label":"Steg 3","title":"Påminnelse","text":"Inget glöms bort.","tone":"ockra","status":{"text":"Oprövad","tone":"ockra"}}]},
+{"type":"table","head":["Steg","Vem","Läge"],"rows":[["Förfrågan","Alla",{"text":"Fungerar","tone":"salvia"}],["Påminnelse","Ansvarig",{"text":"Oprövad","tone":"ockra"}]]}]}]}

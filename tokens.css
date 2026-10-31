@@ -1,0 +1,11 @@
+/* Skissramverk: tokens. Ändra här, inte i komponenterna. */
+:root{
+  --creme:#f3eee4; --papper:#faf7f1; --salvia:#4e7558; --ockra:#bf9522;
+  --terrakotta:#c0683a; --lera:#8a8073; --black:#2e2a24; --linje:#cfc6b6;
+  --serif:'DejaVu Serif',Georgia,serif;
+  --sans:'DejaVu Sans',Arial,sans-serif;
+  --page-w:1600px; --page-h:1131px; --pad-x:110px; --pad-y:84px;
+  --fs-eyebrow:15px; --fs-title:60px; --fs-lede:21px; --fs-h3:30px; --fs-h4:24px;
+  --fs-body:19px; --fs-small:16px; --fs-label:14px; --lh:1.55;
+  --gap:56px;
+}

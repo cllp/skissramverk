@@ -1,0 +1,104 @@
+*{box-sizing:border-box;margin:0;padding:0}
+@page{size:1600px 1131px;margin:0}
+html,body{background:var(--papper)}
+body{width:var(--page-w);color:var(--black);font-family:var(--sans);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:var(--page-w);height:var(--page-h);padding:var(--pad-y) var(--pad-x) 56px;background:var(--papper);position:relative;overflow:hidden;display:flex;flex-direction:column;page-break-after:always;break-after:page}
+.page>*:not(svg){position:relative;z-index:1}
+.page svg.acc{position:absolute;left:0;top:0;z-index:0;pointer-events:none}
+.body{flex:1;display:flex;flex-direction:column;gap:var(--gap);min-height:0}
+.t-sal{--tone:var(--salvia)}.t-ock{--tone:var(--ockra)}.t-ter{--tone:var(--terrakotta)}.t-ler{--tone:var(--lera)}.t-ink{--tone:var(--black)}
+.tone{color:var(--tone)}
+/* rubrik */
+.topline{display:flex;justify-content:space-between;align-items:baseline}
+.eyebrow{font:600 var(--fs-eyebrow)/1.2 var(--sans);letter-spacing:4px;text-transform:uppercase;color:var(--lera)}
+.meta{font:var(--fs-small)/1.2 var(--sans);color:var(--lera)}
+.title{font:400 var(--fs-title)/1.15 var(--serif);margin:20px 0 0}
+.lede{font:var(--fs-lede)/1.6 var(--sans);color:var(--lera);max-width:980px;margin-top:18px}
+.head-status{margin-top:22px}
+.mark{display:inline}
+/* etiketter */
+.label{font:600 var(--fs-label)/1.2 var(--sans);letter-spacing:3px;text-transform:uppercase;color:var(--lera);margin-bottom:16px}
+.label.tone{color:var(--tone)}
+.status{display:inline-block;font:600 var(--fs-label)/1 var(--sans);letter-spacing:3px;text-transform:uppercase;color:var(--tone);margin:18px 0 10px 34px;white-space:nowrap}
+/* spalter */
+.columns{display:grid;gap:var(--gap) 90px;align-items:start}
+.col{display:flex;flex-direction:column;gap:40px;min-width:0}
+/* rader (stil 3) */
+.rows{display:grid;gap:44px 90px}
+.row{border-top:1px solid var(--black);padding-top:22px;min-width:0}
+.row .nr{font:400 40px/1.1 var(--serif);color:var(--tone)}
+.row h3{font:400 var(--fs-h3)/1.25 var(--serif);margin-top:6px}
+.row .sub{font:var(--fs-small)/1.5 var(--sans);color:var(--lera);margin-top:8px}
+.row p{font:var(--fs-body)/var(--lh) var(--sans);margin-top:12px}
+/* kort (stil 1 i treans typografi) */
+.cards{display:grid;gap:34px}
+.card{padding:28px 26px 30px;min-width:0;display:flex;flex-direction:column}
+.card .ic{width:44px;height:44px;color:var(--tone);margin-bottom:16px}
+.card .lbl{font:600 var(--fs-label)/1.3 var(--sans);letter-spacing:2px;text-transform:uppercase;color:var(--lera)}
+.card h3{font:400 var(--fs-h4)/1.25 var(--serif);margin-top:8px}
+.card .sub{font:var(--fs-small)/1.45 var(--sans);color:var(--lera);margin-top:6px}
+.card p{font:var(--fs-small)/1.5 var(--sans);margin-top:12px}
+.card .grow{flex:1}
+.card .status{margin-left:34px}
+/* flöde (stil 2 i treans typografi) */
+.flow{display:grid;grid-template-columns:370px 230px minmax(0,1fr) 270px;column-gap:50px;align-items:center}
+.flow .srcs{display:flex;flex-direction:column;gap:30px;grid-column:1}
+.flow .labels{display:flex;flex-direction:column;gap:30px;grid-column:2}
+.flow .node{display:flex;gap:18px;align-items:center;padding:18px 22px;border:1px solid var(--black);background:var(--papper);min-height:96px}
+.flow .node .ic{width:40px;height:40px;color:var(--tone);flex:none}
+.flow .node h3{font:400 var(--fs-h4)/1.2 var(--serif)}
+.flow .node .sub{font:var(--fs-small)/1.4 var(--sans);color:var(--lera);margin-top:4px}
+.flow .lab{min-height:96px;display:flex;align-items:center;justify-content:center;text-align:center;font:var(--fs-small)/1.45 var(--sans)}
+.flow .hub,.flow .tgt{border:1px solid var(--black);padding:34px 24px;text-align:center;background:var(--papper)}
+.flow .hub{grid-column:3;justify-self:center;width:100%;max-width:290px}.flow .tgt{grid-column:4}
+.flow .hub .ic,.flow .tgt .ic{width:52px;height:52px;margin:0 auto 12px;color:var(--tone)}
+.flow .hub h3,.flow .tgt h3{font:400 var(--fs-h3)/1.2 var(--serif)}
+.flow .hub .sub,.flow .tgt .sub{font:var(--fs-small)/1.4 var(--sans);color:var(--lera);margin-top:6px}
+/* kedja: enkel pil */
+.chain{display:flex;align-items:stretch;gap:80px}
+.chain .step{flex:1;border-top:1px solid var(--black);padding-top:18px;min-width:0}
+.chain .step h4{font:400 var(--fs-h4)/1.25 var(--serif)}
+.chain .step p{font:var(--fs-small)/1.5 var(--sans);margin-top:8px;color:var(--black)}
+/* steg, lista, text, callout */
+.steps ol{list-style:none;counter-reset:s;display:flex;flex-direction:column;gap:14px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:38px 1fr;font:var(--fs-body)/var(--lh) var(--sans)}
+.steps li::before{content:counter(s);font:400 22px/1.35 var(--serif);color:var(--tone)}
+.list ul{list-style:none;display:flex;flex-direction:column;gap:14px}
+.list li{border-left:2px solid var(--tone);padding-left:18px;font:var(--fs-body)/var(--lh) var(--sans)}
+.text p{font:var(--fs-body)/var(--lh) var(--sans)}
+.text p+p{margin-top:10px}
+.callout .big{font:400 var(--fs-h4)/1.35 var(--serif);border-top:1px solid var(--tone);padding-top:14px}
+.callout p{font:var(--fs-small)/1.5 var(--sans);color:var(--lera);margin-top:10px}
+.persona{text-align:left}
+.persona .ic{width:56px;height:56px;color:var(--tone);margin-bottom:18px}
+.persona h3{font:400 var(--fs-h3)/1.2 var(--serif)}
+.persona .sub{font:var(--fs-small)/1.5 var(--sans);color:var(--lera);margin-top:8px}
+/* tabell */
+.table table{width:100%;border-collapse:collapse;font:var(--fs-small)/1.45 var(--sans)}
+.table th{font:600 var(--fs-label)/1.2 var(--sans);letter-spacing:2px;text-transform:uppercase;color:var(--lera);text-align:left;padding:0 18px 12px 0;border-bottom:1px solid var(--black)}
+.table td{padding:12px 18px 12px 0;border-bottom:1px solid var(--linje);vertical-align:top}
+.table td:first-child{font-family:var(--serif);font-size:18px}
+/* legend */
+.legend{display:flex;flex-wrap:wrap;gap:12px 36px}
+.legend span{font:var(--fs-small)/1.3 var(--sans);display:flex;align-items:center;gap:10px}
+.legend i{width:12px;height:12px;border-radius:50%;background:var(--tone);display:inline-block}
+/* fotnot */
+.foot{margin-top:auto;padding-top:14px;display:flex;justify-content:space-between;gap:40px;font:var(--fs-label)/1.4 var(--sans);color:var(--lera)}
+.foot .src{text-align:right;max-width:60%}
+.cards.compact{gap:24px 28px}.cards.compact .card{padding:16px 20px 14px}.cards.compact .ic{width:34px;height:34px;margin-bottom:10px}.cards.compact h3{font-size:21px}.cards.compact p{margin-top:8px;font-weight:600;font-size:14px;letter-spacing:1px;text-transform:uppercase;color:var(--tone)}
+.rows.compact .row{padding-top:16px}.rows.compact h3{font-size:22px}.rows.compact p{font-size:16px;margin-top:8px}.rows.compact .nr{font-size:28px}
+.table td .status{margin:2px 0 2px 34px}.table td{padding-top:14px;padding-bottom:14px}
+.table td:has(.status){width:190px;white-space:nowrap;padding-right:44px}
+
+/* process: stegflöde med simbanor */
+.proc{position:relative;width:100%;flex:none}
+.proc .lane{position:absolute;left:0;right:0}
+.proc .lane-t{position:absolute;left:0;top:50%;transform:translateY(-50%);width:150px;font:600 var(--fs-label)/1.3 var(--sans);letter-spacing:2px;text-transform:uppercase;color:var(--lera)}
+.proc .pnode{position:absolute;z-index:1;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 14px;font:400 21px/1.2 var(--serif);background:var(--papper)}
+.proc .elab{position:absolute;z-index:2;left:0;top:0;text-align:center;background:var(--papper);padding:4px 6px}
+.proc .el{font:600 14px/1.3 var(--sans);color:var(--salvia)}
+.proc .es{font:14px/1.35 var(--sans);color:var(--black);margin-top:2px}
+.tags{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.tags-h{font:600 var(--fs-label)/1 var(--sans);letter-spacing:2px;text-transform:uppercase;color:var(--lera);margin-right:6px}
+.tag{font:14px/1 var(--sans);color:var(--salvia);border:1px solid var(--salvia);border-radius:14px;padding:6px 12px}
+.cards.tight{gap:18px}.cards.tight .card{padding:20px 14px 22px}.cards.tight .ic{width:34px;height:34px;margin-bottom:12px}.cards.tight h3{font-size:19px}.cards.tight .sub{font-size:14px}.cards.tight p{font-size:14px}
