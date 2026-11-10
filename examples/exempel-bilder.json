@@ -1,0 +1,6 @@
+{"title":"Exempel med bilder","meta":"Exempel","footer":"Sida 1 av 1, exempel","pages":[{"eyebrow":"Exempel","title":"Tre platser att jämföra","mark":"Tre platser","lede":"Komponenten photos visar bilder med rubrik, rad och källa. Sökvägar räknas från specens mapp.","blocks":[
+{"type":"photos","cols":3,"height":300,"items":[
+{"src":"bild-1.svg","title":"Plats ett","sub":"Kort rad om läget","credit":"Bild: exempel","tone":"salvia","status":{"text":"Förstahand","tone":"salvia"}},
+{"src":"bild-2.svg","title":"Plats två","sub":"Kort rad om läget","credit":"Bild: exempel","tone":"ockra","status":{"text":"Oprövad","tone":"ockra"}},
+{"src":"bild-3.svg","title":"Plats tre","sub":"Kort rad om läget","credit":"Bild: exempel","tone":"terrakotta","status":{"text":"Fullt","tone":"terrakotta"}}]},
+{"type":"list","heading":"Så används den","tone":"lera","items":["Bilden får en tunn linje, ingen skugga och inga rundade hörn.","Ange alltid bildens källa i credit."]}]}]}

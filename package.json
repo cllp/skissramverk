@@ -8,7 +8,7 @@
  },
  "scripts": {
   "render": "node render.js",
-  "exempel": "node render.js examples/exempel-neutralt.json out"
+  "exempel": "node render.js examples/exempel-neutralt.json out && node render.js examples/exempel-bilder.json out"
  },
  "dependencies": {
   "lucide-static": "*",

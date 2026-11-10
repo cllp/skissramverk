@@ -102,3 +102,13 @@ body{width:var(--page-w);color:var(--black);font-family:var(--sans);-webkit-prin
 .tags-h{font:600 var(--fs-label)/1 var(--sans);letter-spacing:2px;text-transform:uppercase;color:var(--lera);margin-right:6px}
 .tag{font:14px/1 var(--sans);color:var(--salvia);border:1px solid var(--salvia);border-radius:14px;padding:6px 12px}
 .cards.tight{gap:18px}.cards.tight .card{padding:20px 14px 22px}.cards.tight .ic{width:34px;height:34px;margin-bottom:12px}.cards.tight h3{font-size:19px}.cards.tight .sub{font-size:14px}.cards.tight p{font-size:14px}
+
+/* photos: fotorad med tunn linje, ingen skugga, inga rundade hörn */
+.photos{display:grid;gap:30px 34px}
+.photo{margin:0;min-width:0;display:flex;flex-direction:column}
+.photo img{display:block;width:100%;object-fit:cover;border:1px solid var(--linje)}
+.photo h3{font:400 var(--fs-h4)/1.25 var(--serif);margin-top:14px;border-top:2px solid var(--tone);padding-top:10px}
+.photo .sub{font:var(--fs-small)/1.45 var(--sans);color:var(--lera);margin-top:6px}
+.photo .credit{font:var(--fs-label)/1.35 var(--sans);color:var(--lera);margin-top:6px}
+.photo .status{margin:22px 0 8px 34px;align-self:flex-start}
+.photos.compact{gap:20px 24px}.photos.compact h3{font-size:20px;margin-top:10px;padding-top:8px}.photos.compact .sub{font-size:14px}

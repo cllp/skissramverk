@@ -7,7 +7,7 @@ if(!pos[0]){console.error('node render.js <spec.json|yaml> [utkatalog]');process
 const src=pos[0],out=pos[1]||path.join(process.cwd(),'out'),base=path.basename(src).replace(/\.(json|ya?ml)$/,'');
 function load(f){const t=fs.readFileSync(f,'utf8');if(/\.ya?ml$/.test(f)){let y;try{y=require('yaml')}catch{try{y=require('js-yaml')}catch{throw new Error('YAML kräver npm i yaml')}}return (y.parse||y.load)(t);}return JSON.parse(t);}
 const CHROME=process.env.CHROME_PATH||['/usr/bin/google-chrome','/opt/pw-browsers/chromium','/usr/bin/chromium','/usr/bin/chromium-browser','/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'].find(fs.existsSync);
-(async()=>{const doc=load(src);fs.mkdirSync(out,{recursive:true});const html=build(doc);const hf=path.join(out,base+'.html');fs.writeFileSync(hf,html);
+(async()=>{const doc=load(src);fs.mkdirSync(out,{recursive:true});const html=build(doc,path.dirname(path.resolve(src)));const hf=path.join(out,base+'.html');fs.writeFileSync(hf,html);
  const {chromium}=require('playwright-core');const b=await chromium.launch({executablePath:CHROME,args:['--no-sandbox','--font-render-hinting=none']});
  const p=await b.newPage({viewport:{width:1600,height:1131},deviceScaleFactor:Number(opt('--scale')||1)});
  await p.goto('file://'+path.resolve(hf));await p.evaluate(()=>document.fonts.ready);
