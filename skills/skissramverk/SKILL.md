@@ -98,6 +98,7 @@ pages:
 | tags | heading, items [text] | små etiketter |
 | legend | items [{text,tone}] | färgförklaring |
 | status | text, tone | fristående statusring |
+| photos | cols, height, compact, items [{src,title,sub,credit,tone,status}] | bilder med rubrik och källa. `src` är en fil relativt specens mapp (jpg, png, webp, svg) och bäddas in i HTML |
 
 Ikoner är Lucide-namn (lucide-static), till exempel inbox, users, gavel, wallet,
 calendar-check, folder-open, scale, repeat. Ett okänt namn ger fel direkt.
