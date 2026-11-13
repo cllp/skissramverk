@@ -32,7 +32,36 @@ Kräver Node 18 eller senare, Chrome eller Chromium (hittas i `/usr/bin/google-c
 Versioner av en spec görs gärna med ett litet skript som läser föregående version och
 skriver nästa, till exempel `generera-spec-v1.15.py` som läser v1.14. Då syns varje ändring.
 
+## Profiler
+
+Ramverket har två profiler. Profilen väljs för hela dokumentet med `profil` i specen. Utan `profil` gäller `skiss`, och då ser alla specar ut som förut.
+
+| profil | Utseende | När |
+|---|---|---|
+| `skiss` (förval) | Papper och creme, DejaVu Serif och Sans, ockra understrykning, lätt skissade ramar, ringar och pilar | Beslutsunderlag, avtal, interna ritningar. Stilreglerna nedan gäller den här profilen |
+| `lifehub` | Mörk skogsgrön eller ljus kräm, Jost i rubriker och Inter i text, fyllda kort med rundade hörn, statuspiller, raka linjer och pilar, inga skissade accenter | Presentationer och skisser av LIFE Hub, och allt som ska se ut som appen |
+
+I `lifehub` väljs ytan per sida med `yta: mork` (förval) eller `yta: ljus`, eller för hela dokumentet på toppnivån. `yta` i `skiss` är ett fel, och en okänd profil eller yta också. Inget tyst förval.
+
+Samma komponenter och samma fält gäller i båda profilerna. `mark` blir sandfärgad text i stället för en understrykning, och `status` blir en piller i stället för en ring. Typsnitten i `lifehub` är inbäddade i sidan (@fontsource, OFL), så renderingen behöver inget nät.
+
+```yaml
+title: LIFE Hub
+profil: lifehub
+pages:
+  - eyebrow: LIFE Hub
+    title: Grupper som organiserar sig själva
+    blocks: [ ... ]
+  - yta: ljus
+    title: Vägen in
+    blocks: [ ... ]
+```
+
+Exempel: `examples/exempel-lifehub.json`.
+
 ## Stilregler
+
+Gäller profilen `skiss`. I `lifehub` gäller samma regler om innehåll och luft, men fyllda kort och rundade hörn hör till profilen.
 
 Gör:
 - DejaVu Serif för rubriker, namn och nummer. DejaVu Sans för brödtext, etiketter och fotnoter.
