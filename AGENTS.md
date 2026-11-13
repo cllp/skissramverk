@@ -2,6 +2,41 @@
 
 Gäller Claude, Grok och alla andra agenter som gör dokument åt CP.
 
+## Välj stil med beställaren
+
+**Skissramverket** är namnet på hela verktyget och repot. Det finns två val av stil:
+
+- **Redaktionell:** den ursprungliga stilen från TAM. Ljust papper, serifrubriker,
+  salvia och ockra, tunna linjer och lätt skissade accenter.
+- **LifeHub:** LifeHubs visuella identitet. Skogsgrönt och kräm, Jost och Inter,
+  fyllda kort och raka linjer. Mörk och ljus yta är varianter inom samma profil.
+
+Om beställaren inte uttryckligen har angett stil för dokumentet eller uppdraget,
+**fråga innan du skapar eller renderar det**:
+
+> Vilken stil vill du använda: Redaktionell eller LifeHub?
+
+Lista alltid båda alternativen. Gissa inte utifrån projektnamn, repo, tidigare dokument
+eller renderarens tekniska förval. Ett uttryckligt stilval för hela det aktuella uppdraget
+behöver inte frågas om igen. Om LifeHub är valt men ytan inte angiven kan profilens
+tekniska förval användas; mörk och ljus är inte ytterligare stilalternativ.
+
+Läs README:s avsnitt om aktuellt profilstöd innan du väljer tekniska fält. På nuvarande
+main finns bara originalstilen utan profilfält; PR 2 inför LifeHub och använder ännu
+`skiss` som originalets tekniska id. Redaktionell är det beslutade namnet, men skicka
+inte `profil: redaktionell` till en renderer som ännu inte stöder det. Om vald stil inte
+stöds, säg det och ordna rätt rendererrevision; byt aldrig stil tyst.
+
+## Arbetsgång för ett dokument
+
+1. Läs det aktuella projektets regler och dokumentmappens `_projektminne.md`.
+2. Bekräfta stil enligt regeln ovan. Läs `skills/skissramverk/SKILL.md` för spec och layout.
+3. Skriv JSON eller YAML i dokumentets eget repo. Använd komponenterna i README.
+4. Rendera med den gemensamma renderaren. Kräv exit 0 och `QA: inga fel`.
+5. Öppna och granska varje sid-PNG. Kontrollera innehåll, källor, läsordning och layout.
+6. Leverera versionsmärkta filer och uppdatera `_projektminne.md`. Skriv aldrig över
+   tidigare dokumentversioner.
+
 ## Det viktigaste
 
 - **Ett ramverk, en källa.** Alla sidor, presentationer och beslutsunderlag i CP:s stil görs
