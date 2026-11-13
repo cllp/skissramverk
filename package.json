@@ -8,9 +8,11 @@
  },
  "scripts": {
   "render": "node render.js",
-  "exempel": "node render.js examples/exempel-neutralt.json out && node render.js examples/exempel-bilder.json out"
+  "exempel": "node render.js examples/exempel-neutralt.json out && node render.js examples/exempel-bilder.json out && node render.js examples/exempel-lifehub.json out"
  },
  "dependencies": {
+  "@fontsource-variable/jost": "5.3.0",
+  "@fontsource/inter": "5.3.0",
   "lucide-static": "*",
   "playwright-core": "*",
   "roughjs": "^4.6.6"
@@ -24,6 +26,7 @@
   "lib/",
   "tokens.css",
   "skiss.css",
+  "profiler/",
   "examples/"
  ],
  "engines": {

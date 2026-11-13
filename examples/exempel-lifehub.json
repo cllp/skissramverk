@@ -1,0 +1,18 @@
+{"title":"Exempel i profilen lifehub","profil":"lifehub","meta":"Exempel","footer":"Exempel, profilen lifehub",
+"pages":[
+{"eyebrow":"Exempel","meta":"”Mindre tid framför skärmen.”","title":"En förening som planerar sig själv","mark":"planerar sig själv","lede":"Samma spec som i profilen skiss, med mörk yta, fyllda kort och raka linjer.","bodyTop":44,"gap":40,"blocks":[
+{"type":"cards","cols":3,"items":[
+{"icon":"inbox","label":"Steg 1","title":"Förfrågan","text":"Någon hör av sig med en fråga eller ett önskemål.","tone":"salvia","status":{"text":"Fungerar","tone":"salvia"}},
+{"icon":"user","label":"Steg 2","title":"Ansvarig","text":"En person tar ärendet och syns som ansvarig.","tone":"salvia","status":{"text":"Fungerar","tone":"salvia"}},
+{"icon":"bell","label":"Steg 3","title":"Påminnelse","text":"Inget glöms bort, påminnelsen kommer av sig själv.","tone":"ockra","status":{"text":"Oprövad","tone":"ockra"}}]},
+{"type":"rows","cols":3,"compact":true,"items":[
+{"nr":"1","title":"Kalendern","text":"Möten och arbetsdagar på ett ställe."},
+{"nr":"2","title":"Ärenden","text":"Vem gör vad, och till när."},
+{"nr":"3","title":"Biblioteket","text":"Protokoll och bilder som går att hitta."}]}]},
+{"eyebrow":"Exempel","yta":"ljus","title":"Vägen in till föreningen","lede":"Ljus yta på en sida, för variation eller utskrift.","bodyTop":40,"gap":36,"blocks":[
+{"type":"flow","sources":[
+{"icon":"mail","title":"Mejl","sub":"Till föreningens adress","label":"läses in","tone":"salvia"},
+{"icon":"message-circle","title":"Chatt","sub":"Medlemmarnas tråd","label":"blir ett ärende","tone":"salvia"},
+{"icon":"globe","title":"Webbformulär","sub":"För den som inte är medlem","label":"väntar på svar","tone":"ockra","dashed":true}],
+"hub":{"icon":"users","title":"Föreningen","sub":"Styrelsen ser allt"},"target":{"icon":"check","title":"Klart","sub":"Svar inom en vecka"}},
+{"type":"table","head":["Väg","Vem svarar","Läge"],"rows":[["Mejl","Sekreteraren",{"text":"Fungerar","tone":"salvia"}],["Webbformulär","Ordföranden",{"text":"Oprövad","tone":"ockra"}]]}]}]}

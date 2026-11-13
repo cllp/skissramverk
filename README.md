@@ -35,7 +35,9 @@ Krav: Node 18 eller senare, Chrome eller Chromium (annars `CHROME_PATH`), typsni
  "blocks":[{"type":"chain","tone":"ockra","steps":[{"title":"Förslag"},{"title":"Möte"},{"title":"Protokoll"}]}]}]}
 ```
 
-Specens form, alla komponenter, stilregler och kvalitetskontroll:
+**Två profiler.** `skiss` är förvalet: papper, serif och lätt skissade accenter. `lifehub` ger mörk skogsgrön eller ljus kräm, Jost och Inter, fyllda kort och raka linjer. Välj med `"profil": "lifehub"` i specen och `"yta": "ljus"` per sida. Exempel: `examples/exempel-lifehub.json`.
+
+Specens form, profilerna, alla komponenter, stilregler och kvalitetskontroll:
 [`skills/skissramverk/SKILL.md`](skills/skissramverk/SKILL.md).
 
 ## Använda i ett repo
@@ -76,7 +78,8 @@ lib/build-html.js    spec till HTML, alla komponenter
 lib/accents.js       körs i webbläsaren: mäter, ritar accenter, QA
 lib/rough.js         rough.js
 tokens.css           palett, typografi, mått. Ändra här, inte i komponenterna
-skiss.css            komponenternas layout
+skiss.css            komponenternas layout (profilen skiss)
+profiler/lifehub.css profilen lifehub, läggs ovanpå när specen väljer den
 examples/            neutrala exempel
 skills/skissramverk/ skillen för Claude Code
 .claude-plugin/      plugin och marketplace för Claude Code

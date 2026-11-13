@@ -1,0 +1,55 @@
+/* Profil lifehub: mörk skogsgrön eller ljus kräm, Jost i rubriker, Inter i text, fyllda kort med rundade hörn och inga skissade accenter.
+   Läggs efter tokens.css och skiss.css när specen har "profil": "lifehub". Profilen skiss (förvalet) påverkas inte.
+   Ytan väljs per sida med "yta": "mork" (förval) eller "ljus". Tonerna betyder samma sak som i skiss, i ljusare nyanser på den mörka ytan. */
+:root{--serif:'Jost',Arial,sans-serif;--sans:'Inter',Arial,sans-serif;--radie:20px}
+.yta-mork{--papper:#262d27;--kort:#323b33;--black:#f4f0e8;--dampad:#d9d4c8;--lera:#c9b49b;--linje:#465247;
+  --salvia:#9db09a;--ockra:#c9b49b;--terrakotta:#d9906b}
+.yta-ljus{--papper:#f4f0e8;--kort:#e9e3d7;--black:#262d27;--dampad:#3f463f;--lera:#7a6249;--linje:#d3cabb;
+  --salvia:#5e7a62;--ockra:#a0804f;--terrakotta:#b5643f}
+html,body{background:#262d27}
+.page{background:var(--papper);color:var(--black)}
+.page p,.page li{color:var(--dampad)}
+/* rubrik */
+.eyebrow{font:500 var(--fs-eyebrow)/1.2 var(--serif);letter-spacing:5px;color:var(--lera)}
+.meta{font:italic var(--fs-small)/1.3 var(--sans);color:var(--lera)}
+.title{font:300 var(--fs-title)/1.2 var(--serif);letter-spacing:1.5px}
+.lede{color:var(--dampad)}
+.mark{color:var(--ockra)}
+.label,.tags-h,.table th,.proc .lane-t{font-family:var(--serif);font-weight:500;letter-spacing:3px;color:var(--lera)}
+/* status: en fylld pill i stället för en skissad ring */
+.status{color:var(--tone);background:color-mix(in srgb,var(--tone) 18%,transparent);border-radius:999px;padding:7px 14px;margin:18px 0 6px 0;letter-spacing:2px}
+.card .status,.table td .status,.photo .status{margin-left:0}
+.card .status,.photo .status{align-self:flex-start}
+.table td:has(.status){padding-right:18px}
+/* rader */
+.row{border-top-color:var(--linje)}
+.row .nr,.row h3{font-family:var(--serif)}
+.row h3{font-weight:500}
+/* kort: fyllda, rundade, ingen ram */
+.card{background:var(--kort);border-radius:var(--radie);padding:26px 28px 28px}
+.card h3{font:500 var(--fs-h4)/1.25 var(--serif)}
+.card .lbl{font-family:var(--serif);font-weight:500;color:var(--lera)}
+.cards.compact .card{padding:18px 22px 16px}.cards.tight .card{padding:20px 16px 22px}
+/* flöde, kedja och process: fyllda noder, raka linjer */
+.flow .node,.flow .hub,.flow .tgt{border:0;background:var(--kort);border-radius:var(--radie)}
+.flow .node h3,.flow .hub h3,.flow .tgt h3{font-weight:500}
+.chain .step{border-top-color:var(--linje)}
+.chain .step h4{font-weight:500}
+.chain .step p{color:var(--dampad)}
+.proc .pnode{background:var(--kort);border-radius:14px;font:500 20px/1.2 var(--serif);color:var(--black)}
+.proc .pnode.strong{box-shadow:inset 0 0 0 2px var(--salvia)}
+.proc .elab{background:var(--papper)}
+.proc .es{color:var(--dampad)}
+/* text, lista, callout, persona */
+.steps li::before{font-family:var(--serif);font-weight:500}
+.callout .big{font:400 var(--fs-h4)/1.35 var(--serif);color:var(--black)}
+.persona h3{font-weight:500}
+/* tabell */
+.table th{border-bottom-color:var(--linje)}
+.table td{color:var(--dampad)}
+.table td:first-child{font-family:var(--serif);font-weight:500;color:var(--black)}
+/* taggar och foton */
+.tag{color:var(--salvia);border-color:color-mix(in srgb,var(--salvia) 55%,transparent)}
+.photo img{border:0;border-radius:var(--radie)}
+.photo h3{font-weight:500}
+.foot{color:var(--lera)}
