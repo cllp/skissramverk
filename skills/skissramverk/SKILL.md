@@ -34,14 +34,14 @@ skriver nästa, till exempel `generera-spec-v1.15.py` som läser v1.14. Då syns
 
 ## Profiler
 
-Ramverket har två profiler. Profilen väljs för hela dokumentet med `profil` i specen. Utan `profil` gäller `skiss`, och då ser alla specar ut som förut.
+Ramverket har två profiler. Profilen väljs för hela dokumentet med `profil` i specen. Utan `profil` gäller `redaktionell`, och då ser alla specar ut som förut. Namnen Redaktionell och LifeHub valde CP 2026-11-13; före det hette förvalet `skiss`, och `"profil": "skiss"` är nu ett fel.
 
 | profil | Utseende | När |
 |---|---|---|
-| `skiss` (förval) | Papper och creme, DejaVu Serif och Sans, ockra understrykning, lätt skissade ramar, ringar och pilar | Beslutsunderlag, avtal, interna ritningar. Stilreglerna nedan gäller den här profilen |
+| `redaktionell` (förval) | Papper och creme, DejaVu Serif och Sans, ockra understrykning, lätt skissade ramar, ringar och pilar | Beslutsunderlag, avtal, interna ritningar. Stilreglerna nedan gäller den här profilen |
 | `lifehub` | Mörk skogsgrön eller ljus kräm, Jost i rubriker och Inter i text, fyllda kort med rundade hörn, statuspiller, raka linjer och pilar, inga skissade accenter | Presentationer och skisser av LIFE Hub, och allt som ska se ut som appen |
 
-I `lifehub` väljs ytan per sida med `yta: mork` (förval) eller `yta: ljus`, eller för hela dokumentet på toppnivån. `yta` i `skiss` är ett fel, och en okänd profil eller yta också. Inget tyst förval.
+I `lifehub` väljs ytan per sida med `yta: mork` (förval) eller `yta: ljus`, eller för hela dokumentet på toppnivån. `yta` i `redaktionell` är ett fel, och en okänd profil eller yta också. Inget tyst förval.
 
 Samma komponenter och samma fält gäller i båda profilerna. `mark` blir sandfärgad text i stället för en understrykning, och `status` blir en piller i stället för en ring. Typsnitten i `lifehub` är inbäddade i sidan (@fontsource, OFL), så renderingen behöver inget nät.
 
@@ -61,7 +61,7 @@ Exempel: `examples/exempel-lifehub.json`.
 
 ## Stilregler
 
-Gäller profilen `skiss`. I `lifehub` gäller samma regler om innehåll och luft, men fyllda kort och rundade hörn hör till profilen.
+Gäller profilen `redaktionell`. I `lifehub` gäller samma regler om innehåll och luft, men fyllda kort och rundade hörn hör till profilen.
 
 Gör:
 - DejaVu Serif för rubriker, namn och nummer. DejaVu Sans för brödtext, etiketter och fotnoter.

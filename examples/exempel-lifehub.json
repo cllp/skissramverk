@@ -1,6 +1,6 @@
 {"title":"Exempel i profilen lifehub","profil":"lifehub","meta":"Exempel","footer":"Exempel, profilen lifehub",
 "pages":[
-{"eyebrow":"Exempel","meta":"”Mindre tid framför skärmen.”","title":"En förening som planerar sig själv","mark":"planerar sig själv","lede":"Samma spec som i profilen skiss, med mörk yta, fyllda kort och raka linjer.","bodyTop":44,"gap":40,"blocks":[
+{"eyebrow":"Exempel","meta":"”Mindre tid framför skärmen.”","title":"En förening som planerar sig själv","mark":"planerar sig själv","lede":"Samma spec som i profilen Redaktionell, med mörk yta, fyllda kort och raka linjer.","bodyTop":44,"gap":40,"blocks":[
 {"type":"cards","cols":3,"items":[
 {"icon":"inbox","label":"Steg 1","title":"Förfrågan","text":"Någon hör av sig med en fråga eller ett önskemål.","tone":"salvia","status":{"text":"Fungerar","tone":"salvia"}},
 {"icon":"user","label":"Steg 2","title":"Ansvarig","text":"En person tar ärendet och syns som ansvarig.","tone":"salvia","status":{"text":"Fungerar","tone":"salvia"}},
