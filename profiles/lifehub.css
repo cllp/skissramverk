@@ -1,0 +1,14 @@
+/* Profil: LIFE Hub. Valfri, slås på med "profile": "lifehub" i specen.
+   Bara värden, ingen struktur. Utan profil ser alla specar ut som förut.
+   Källa: life-hub.app (publika tokens: publik-ljus #f4f1ea, publik-mörk #202420,
+   markering #c99a3e, accentband #7d6b5d, auto #4a6b5d, blocked #c2681c,
+   Plus Jakarta Sans, rubriker i Georgia), läst den 18 november 2026. */
+:root{
+  --papper:#f4f1ea; --creme:#ebe6da; --black:#202420; --linje:#d6cfc0;
+  --ockra:#c99a3e; --salvia:#4a6b5d; --terrakotta:#c2681c; --lera:#7d6b5d;
+  --serif:Georgia,'DejaVu Serif',serif;
+  --sans:'Plus Jakarta Sans','DejaVu Sans',Arial,sans-serif;
+}
+/* Plus Jakarta Sans har högre ascent än DejaVu Sans. Med radhöjd 1 klipps statusringens text,
+   så profilen ger den lite luft. Enda strukturvärdet i profilen. */
+.status{line-height:1.25}

@@ -24,6 +24,10 @@ npm run exempel
 ```
 
 Flaggor: `--pdf-only`, `--png-only`, `--seed N`, `--scale 2`.
+
+Profil: `"profile": "lifehub"` i specen lägger LIFE Hubs färger och typsnitt ovanpå tokens
+(`profiles/lifehub.css`). Utan profil ser allt ut som förut.
+
 Exit 0 betyder att QA inte hittade fel, 1 att QA hittade fel, 2 att något gick sönder.
 
 Krav: Node 18 eller senare, Chrome eller Chromium (annars `CHROME_PATH`), typsnitten DejaVu Serif och DejaVu Sans.

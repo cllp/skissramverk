@@ -8,7 +8,7 @@
  },
  "scripts": {
   "render": "node render.js",
-  "exempel": "node render.js examples/exempel-neutralt.json out && node render.js examples/exempel-bilder.json out"
+  "exempel": "node render.js examples/exempel-neutralt.json out && node render.js examples/exempel-bilder.json out && node render.js examples/exempel-profil-lifehub.json out"
  },
  "dependencies": {
   "lucide-static": "*",
@@ -24,6 +24,7 @@
   "lib/",
   "tokens.css",
   "skiss.css",
+  "profiles/",
   "examples/"
  ],
  "engines": {
