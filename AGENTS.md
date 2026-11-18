@@ -21,11 +21,9 @@ eller renderarens tekniska förval. Ett uttryckligt stilval för hela det aktuel
 behöver inte frågas om igen. Om LifeHub är valt men ytan inte angiven kan profilens
 tekniska förval användas; mörk och ljus är inte ytterligare stilalternativ.
 
-Läs README:s avsnitt om aktuellt profilstöd innan du väljer tekniska fält. På nuvarande
-main finns bara originalstilen utan profilfält; PR 2 inför LifeHub och använder ännu
-`skiss` som originalets tekniska id. Redaktionell är det beslutade namnet, men skicka
-inte `profil: redaktionell` till en renderer som ännu inte stöder det. Om vald stil inte
-stöds, säg det och ordna rätt rendererrevision; byt aldrig stil tyst.
+Skicka `profil: redaktionell` eller `profil: lifehub` uttryckligen i specen. `profil: skiss`,
+originalets tekniska id före namnbytet, ger ett fel. Om vald stil inte stöds av den renderare
+du kör, säg det och ordna rätt rendererrevision; byt aldrig stil tyst.
 
 ## Arbetsgång för ett dokument
 

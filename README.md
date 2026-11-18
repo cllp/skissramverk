@@ -19,25 +19,19 @@ CP har valt två profilnamn:
 - **LifeHub:** LifeHubs visuella identitet. Skogsgrönt och kräm, Jost i rubriker, Inter i
   brödtext, fyllda kort och raka linjer. Har mörk och ljus yta för olika sidor.
 
-**Leveransläget ska skiljas från namnvalet:** på main finns den ursprungliga stilen ännu som
-enda stil, utan profilfält. [PR 2](https://github.com/cllp/skissramverk/pull/2) inför profilval
-för LifeHub och kallar i sin nuvarande form originalets tekniska id `skiss`. Det valda namnet
-är Redaktionell; `redaktionell` ska inte användas som ett fungerande tekniskt id förrän
-namnbytet också är genomfört i renderaren. Okända fält kan annars ignoreras av den äldre
-renderaren och ge fel stil utan felmeddelande.
-
-I PR 2 väljs LifeHub med `"profil": "lifehub"`. `"yta": "mork"` eller `"yta": "ljus"`
-kan anges för hela dokumentet eller per sida. Sidans val går före dokumentets. Mörk yta är
-LifeHubs tekniska förval där. Kontrollera att profiländringen är mergad innan kommandot
-från huvudgrenen används för LifeHub. Samma komponenter och innehållsfält används i båda
-profilerna. I LifeHub blir `mark` accentfärgad text och status fyllda etiketter; i den
-ursprungliga stilen används skissad understrykning och ringar.
+Profilen väljs med `profil` i specen. Utan fältet gäller `redaktionell`, så äldre specar ser ut
+som förut. `"profil": "skiss"`, det tekniska id:t före namnbytet, ger ett fel i stället för att
+tyst välja en stil. LifeHub väljs med `"profil": "lifehub"`, och `"yta": "mork"` eller
+`"yta": "ljus"` kan anges för hela dokumentet eller per sida. Sidans val går före dokumentets,
+och mörk yta är LifeHubs förval. Samma komponenter och innehållsfält används i båda
+profilerna. I LifeHub blir `mark` accentfärgad text och status fyllda etiketter; i Redaktionell
+används skissad understrykning och ringar. Exempel: `examples/exempel-lifehub.json`.
 
 ## Kom igång
 
 Krav: Node 18 eller senare samt Chrome eller Chromium. Ange `CHROME_PATH` om webbläsaren
 inte hittas automatiskt. Den ursprungliga stilen kräver installerade DejaVu Serif och
-DejaVu Sans. LifeHub-förslaget i PR 2 bäddar in Jost och Inter i den genererade HTML-filen.
+DejaVu Sans. LifeHub bäddar in Jost och Inter i den genererade HTML-filen.
 Åtkomst till GitHub-repot krävs när verktyget hämtas därifrån.
 
 Kör från projektet där dokumentet hör hemma:
@@ -194,7 +188,7 @@ Viktiga filer i detta repo:
 - `lib/rough.js`: biblioteket för skissade linjer.
 - `tokens.css`: grundpalett, typsnitt, typstorlekar och sidmått.
 - `skiss.css`: komponenternas grundlayout.
-- `profiler/lifehub.css`: profilens tilläggsstil i PR 2, ännu inte i main.
+- `profiler/lifehub.css`: profilen LifeHubs tilläggsstil, läggs ovanpå när specen väljer den.
 - `examples/`: neutrala exempel som visar och verifierar funktionerna.
 - `skills/skissramverk/SKILL.md`: detaljerad arbetsinstruktion och specguide.
 - `AGENTS.md`: gemensamma instruktioner för alla agenter.
@@ -204,12 +198,11 @@ Viktiga filer i detta repo:
 
 Ändra ramverket i en liten PR med ett neutralt exempel som visar förändringen. Rendera
 alla exempel med `npm run exempel`, läs QA och granska sidbilderna. Kontrollera båda
-profilerna när profilvalet är levererat. Befintliga dokument ska behålla sitt utseende om
+profilerna. Befintliga dokument ska behålla sitt utseende om
 CP inte uttryckligen har beställt en förändring.
 
 Gemensamma färger, typsnitt och typstorlekar ändras bara med CP:s godkännande. En ny
-komponent eller profil beskrivs både här och i skillen. Håll statusavsnittet ovan aktuellt
-när profilvalet och namnbytet mergas. Äldre överlämningar är historik; använd aktuella
+komponent eller profil beskrivs både här och i skillen. Äldre överlämningar är historik; använd aktuella
 AGENTS.md, README och kod för nya arbeten.
 
 För Claude Code kan skillen anslutas med `skissramverk@skissramverk` från GitHub-repot
