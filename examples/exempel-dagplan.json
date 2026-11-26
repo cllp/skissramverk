@@ -1,0 +1,11 @@
+{"title":"Exempel dagplan","meta":"Exempel","footer":"Exempel, dagplan","pages":[
+{"eyebrow":"Exempel","title":"Ett halvår, natt för natt","mark":"natt för natt","lede":"Färgen visar vilket lag som har jouren. Strecket är bytesdagen.","bodyTop":32,"blocks":[
+{"type":"timeline","from":"2027-01-01","to":"2027-06-30","markText":"Helg eller lov","changeText":"Bytesdag","weekText":"Veckonummer (måndagar)",
+ "series":[{"text":"Lag A","tone":"ockra"},{"text":"Lag B","tone":"salvia"}],
+ "spans":[{"from":"2027-01-01","to":"2027-01-15","series":0},{"from":"2027-01-15","to":"2027-02-05","series":1},{"from":"2027-02-05","to":"2027-03-08","series":0},{"from":"2027-03-08","to":"2027-04-09","series":1},{"from":"2027-04-09","to":"2027-05-21","series":0},{"from":"2027-05-21","to":"2027-07-01","series":1}],
+ "marks":[{"from":"2027-01-01","to":"2027-01-06"},{"from":"2027-03-01","to":"2027-03-07"},{"from":"2027-03-26","to":"2027-03-29"},{"from":"2027-06-25","to":"2027-06-26"}]}]},
+{"eyebrow":"Exempel","title":"Samma halvår, månad för månad","mark":"månad för månad","lede":"Samma plan som en vanlig kalender. Bytesdagen står utan färg.","bodyTop":32,"blocks":[
+{"type":"calendar","cols":3,"from":"2027-01-01","to":"2027-06-30","markText":"Helg eller lov","changeText":"Bytesdag",
+ "series":[{"text":"Lag A","tone":"ockra"},{"text":"Lag B","tone":"salvia"}],
+ "spans":[{"from":"2027-01-01","to":"2027-01-15","series":0},{"from":"2027-01-15","to":"2027-02-05","series":1},{"from":"2027-02-05","to":"2027-03-08","series":0},{"from":"2027-03-08","to":"2027-04-09","series":1},{"from":"2027-04-09","to":"2027-05-21","series":0},{"from":"2027-05-21","to":"2027-07-01","series":1}],
+ "marks":[{"from":"2027-01-01","to":"2027-01-06"},{"from":"2027-03-01","to":"2027-03-07"},{"from":"2027-03-26","to":"2027-03-29"},{"from":"2027-06-25","to":"2027-06-26"}]}]}]}

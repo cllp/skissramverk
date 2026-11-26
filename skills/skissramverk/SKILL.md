@@ -128,6 +128,8 @@ pages:
 | legend | items [{text,tone}] | färgförklaring |
 | status | text, tone | fristående statusring |
 | photos | cols, height, compact, items [{src,title,sub,credit,tone,status}] | bilder med rubrik och källa. `src` är en fil relativt specens mapp (jpg, png, webp, svg) och bäddas in i HTML |
+| timeline | from, to, series [{text,tone}], spans [{from,to,series}], marks [{from,to}], markText, changeText, weekText, changes | dagplan, en rad per månad. En period går fram till sitt `to`, som är bytesdagen. `series` i en period är ordningsnumret från 0 |
+| calendar | samma som timeline, plus cols | samma dagplan som månadskalendrar med veckonummer. Bytesdagen står utan färg |
 
 Ikoner är Lucide-namn (lucide-static), till exempel inbox, users, gavel, wallet,
 calendar-check, folder-open, scale, repeat. Ett okänt namn ger fel direkt.

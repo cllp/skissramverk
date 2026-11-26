@@ -8,7 +8,7 @@
  },
  "scripts": {
   "render": "node render.js",
-  "exempel": "node render.js examples/exempel-neutralt.json out && node render.js examples/exempel-bilder.json out && node render.js examples/exempel-lifehub.json out"
+  "exempel": "node render.js examples/exempel-neutralt.json out && node render.js examples/exempel-bilder.json out && node render.js examples/exempel-lifehub.json out && node render.js examples/exempel-dagplan.json out"
  },
  "dependencies": {
   "@fontsource-variable/jost": "5.3.0",
