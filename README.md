@@ -152,7 +152,7 @@ innehåll i specen. Följande komponenter finns i renderaren:
   en svag bakgrund, till exempel helgdagar. Varje måndag bär sitt veckonummer.
   `markText`, `changeText` och `weekText` är förklaringens ord. `changes` lägger till
   bytesdagar (planens första dag räknas annars inte som ett byte), och `changes: false`
-  tar bort strecken.
+  tar bort ramarna. Bytesdagen har en ram runt dagens siffra.
 - **`calendar`**, samma dagplan som vanliga månadskalendrar med veckonummer. Samma fält
   som `timeline`, plus `cols` för antal månader per rad (förval 4). Bytesdagen står utan
   färg, eftersom den inte hör till någon.
