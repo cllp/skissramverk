@@ -112,3 +112,34 @@ body{width:var(--page-w);color:var(--black);font-family:var(--sans);-webkit-prin
 .photo .credit{font:var(--fs-label)/1.35 var(--sans);color:var(--lera);margin-top:6px}
 .photo .status{margin:22px 0 8px 34px;align-self:flex-start}
 .photos.compact{gap:20px 24px}.photos.compact h3{font-size:20px;margin-top:10px;padding-top:8px}.photos.compact .sub{font-size:14px}
+
+/* timeline och calendar: en dagplan. Tunna staplar i tonen, inga fyllda plattor. Markerade dagar får en svag ton av lera, och bytesdagen ett streck. */
+.dl-leg{display:flex;flex-wrap:wrap;gap:8px 34px;margin-bottom:14px}
+.dl-leg span{font:var(--fs-label)/20px var(--sans);display:flex;align-items:center;gap:10px}
+.dl-leg i{display:inline-block;font-style:normal}
+.dl-leg i.s{width:30px;height:10px;background:var(--tone)}
+.dl-leg i.m{width:24px;height:20px;background:color-mix(in srgb,var(--lera) 20%,transparent)}
+.dl-leg i.c{width:2px;height:20px;background:var(--black)}
+.dl-leg i.w{font:11px/20px var(--sans);color:var(--lera)}
+.tl-r{display:grid;grid-template-columns:96px minmax(0,1fr);align-items:center;border-top:1px solid var(--linje)}
+.tl-m{font:400 17px/1.2 var(--serif)}
+.tl-ds{display:grid;grid-template-columns:repeat(31,minmax(0,1fr))}
+.tl-d{position:relative;display:flex;flex-direction:column;align-items:center;height:46px;padding-top:2px}
+.tl-d.mk,.cal-d.mk{background:color-mix(in srgb,var(--lera) 20%,transparent)}
+.tl-w{height:13px;font:10px/13px var(--sans);color:var(--lera);align-self:flex-start;white-space:nowrap}
+.tl-b{display:block;width:100%;height:11px;background:var(--tone)}
+.tl-b.tom,.cal-b.tom{background:none}
+.tl-n{font:11px/18px var(--sans);color:var(--lera)}
+.tl-d.we .tl-n{font-weight:700;color:var(--black)}
+.tl-d.ch::before{content:'';position:absolute;left:-1px;top:10px;width:2px;height:22px;background:var(--black);z-index:1}
+.cal-ms{display:grid;gap:22px 44px}
+.cal-t{font:400 19px/1.2 var(--serif);margin-bottom:6px}
+.cal-g{display:grid;grid-template-columns:26px repeat(7,minmax(0,1fr))}
+.cal-h{font:600 11px/16px var(--sans);letter-spacing:1px;color:var(--lera);text-align:center}
+.cal-v{font:10px/26px var(--sans);color:var(--lera)}
+.cal-d{position:relative;height:26px;display:flex;flex-direction:column;align-items:center}
+.cal-n{font:13px/19px var(--sans)}
+.cal-b{display:block;width:100%;height:5px;background:var(--tone)}
+.cal-d.ch .cal-n{font-weight:700}
+.cal-d.ch::before{content:'';position:absolute;left:0;top:3px;width:2px;height:20px;background:var(--black)}
+

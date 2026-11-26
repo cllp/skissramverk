@@ -145,6 +145,20 @@ innehåll i specen. Följande komponenter finns i renderaren:
 - **`photos`**, bilder med rubrik och källa. Ange `items` med `src`, valfri `title`,
   `sub`, `credit`, `tone`, `status`. `cols`, `height` och `compact` styr layouten.
   Lokala bildsökvägar räknas från specens mapp och bäddas in i HTML som data-URI.
+- **`timeline`**, en dagplan som en rad per månad: vem som har vilka dagar, natt för natt.
+  Ange `from` och `to` (ÅÅÅÅ-MM-DD), `series` med `text` och `tone`, och `spans` med `from`,
+  `to` och `series` (ordningsnumret i `series`, från 0). En period går fram till sitt `to`,
+  som är bytesdagen och hör till nästa period. `marks` med `from` och valfri `to` ger dagar
+  en svag bakgrund, till exempel helgdagar. Varje måndag bär sitt veckonummer.
+  `markText`, `changeText` och `weekText` är förklaringens ord. `changes` lägger till
+  bytesdagar (planens första dag räknas annars inte som ett byte), och `changes: false`
+  tar bort strecken.
+- **`calendar`**, samma dagplan som vanliga månadskalendrar med veckonummer. Samma fält
+  som `timeline`, plus `cols` för antal månader per rad (förval 4). Bytesdagen står utan
+  färg, eftersom den inte hör till någon.
+
+  Två perioder som täcker samma dag, ett ogiltigt datum eller en okänd serie stoppar
+  renderingen.
 
 Ikoner anges med namn från `lucide-static`, exempelvis `inbox`, `users` eller `folder-open`.
 Ett okänt ikonnamn eller en okänd komponent stoppar renderingen. Renderaren är inte en
