@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "curl -fsSL -m 30 https://raw.githubusercontent.com/cllp/wayofworking/main/start.sh | bash",
+            "timeout": 120
+          }
+        ]
+      }
+    ]
+  }
+}
